@@ -30,10 +30,29 @@ function App() {
 		setTasks(removeTask);
 	}
 
+	function toggleTaskCompletedById(id: string) {
+		const newTask = tasks.map((task) => {
+			if (task.id === id) {
+				return {
+					...task,
+					isComplete: !task.isComplete,
+				};
+			}
+
+			return task;
+		});
+
+		setTasks(newTask);
+	}
+
 	return (
 		<>
 			<Header onAddTask={addTask} />
-			<Tasks tasks={tasks} onDelete={removeTask} />
+			<Tasks
+				tasks={tasks}
+				onDelete={removeTask}
+				onComplete={toggleTaskCompletedById}
+			/>
 		</>
 	);
 }
