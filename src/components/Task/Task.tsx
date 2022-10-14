@@ -2,6 +2,7 @@ import styles from "./Taks.module.css";
 
 import { ITask } from "../../App";
 import { TbTrash } from "react-icons/tb";
+import { BsFillCheckCircleFill } from "react-icons/bs";
 
 interface Props {
 	task: ITask;
@@ -9,10 +10,12 @@ interface Props {
 }
 
 export function Task({ task, onDelete }: Props) {
+	const isCompleted = true;
+
 	return (
 		<div className={styles.task}>
 			<button className={styles.checkContainer}>
-				<div />
+				{isCompleted ? <BsFillCheckCircleFill /> : <div />}
 			</button>
 
 			<p>{task.title}</p>
