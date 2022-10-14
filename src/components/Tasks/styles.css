@@ -1,4 +1,4 @@
-.task {
+.task-list {
 	width: 100%;
 	max-width: 46rem;
 	margin: 0 auto;
@@ -6,7 +6,7 @@
 	padding: 0 1rem;
 }
 
-.header {
+.header-list {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -14,23 +14,23 @@
 	margin-bottom: 1.5rem;
 }
 
-.header div {
+.header-list div {
 	display: flex;
 	justify-content: center;
 	gap: 0.8rem;
 }
 
-.header p {
+.header-list p {
 	color: var(--blue);
 	font-size: 0.875rem;
 	font-weight: 600;
 }
 
-.header p.textPurple {
+.header-list p.textPurple {
 	color: var(--purple);
 }
 
-.header span {
+.header-list span {
 	background: var(--gray-400);
 	color: var(--gray-200);
 	padding: 3px 9px;

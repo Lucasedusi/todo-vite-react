@@ -3,7 +3,7 @@ import { Task } from "../Task/Task";
 
 import { TbClipboardText } from "react-icons/tb";
 
-import styles from "./Tasks.module.css";
+import "./styles.css";
 
 interface Props {
 	tasks: ITask[];
@@ -16,22 +16,22 @@ export function Tasks({ tasks, onDelete, onComplete }: Props) {
 	const completedTasks = tasks.filter((task) => task.isComplete).length;
 
 	return (
-		<section className={styles.task}>
-			<header className={styles.header}>
+		<section className="task-list">
+			<header className="header-list">
 				<div>
 					<p>Tarefas Criadas</p>
 					<span>{tasksQuantify}</span>
 				</div>
 
 				<div>
-					<p className={styles.textPurple}>Concluídas</p>
+					<p className="textPurple">Concluídas</p>
 					<span>
 						{completedTasks} de {tasksQuantify}
 					</span>
 				</div>
 			</header>
 
-			<div className={styles.list}>
+			<div className="list">
 				{tasks.map((task) => (
 					<Task
 						key={task.id}
@@ -42,7 +42,7 @@ export function Tasks({ tasks, onDelete, onComplete }: Props) {
 				))}
 
 				{tasks.length <= 0 && (
-					<section className={styles.empty}>
+					<section className="empty">
 						<TbClipboardText size={50} />
 
 						<div>

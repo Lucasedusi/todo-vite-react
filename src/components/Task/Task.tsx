@@ -1,4 +1,4 @@
-import styles from "./Taks.module.css";
+import "./styles.css";
 
 import { ITask } from "../../App";
 import { TbTrash } from "react-icons/tb";
@@ -12,19 +12,14 @@ interface Props {
 
 export function Task({ task, onDelete, onComplete }: Props) {
 	return (
-		<div className={styles.task}>
-			<button
-				className={styles.checkContainer}
-				onClick={() => onComplete(task.id)}
-			>
+		<div className="task">
+			<button className="checkContainer" onClick={() => onComplete(task.id)}>
 				{task.isComplete ? <BsFillCheckCircleFill /> : <div />}
 			</button>
 
-			<p className={task.isComplete ? styles.textCompleted : ""}>
-				{task.title}
-			</p>
+			<p className={task.isComplete ? "textCompleted" : ""}>{task.title}</p>
 
-			<button className={styles.deleteButton} onClick={() => onDelete(task.id)}>
+			<button className="deleteButton" onClick={() => onDelete(task.id)}>
 				<TbTrash size={20} />
 			</button>
 		</div>

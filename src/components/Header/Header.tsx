@@ -3,7 +3,8 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 
 import logo from "../../assets/logo.svg";
-import styles from "./Header.module.css";
+
+import "./styles.css";
 
 interface Props {
 	onAddTask: (taskTitle: string) => void;
@@ -24,10 +25,10 @@ export function Header({ onAddTask }: Props) {
 	}
 
 	return (
-		<header className={styles.header}>
+		<header className="header">
 			<img src={logo} alt="Logo" />
 
-			<form className={styles.newTaksForm} onSubmit={handleSubmit}>
+			<form className="newTaksForm" onSubmit={handleSubmit}>
 				<input
 					placeholder="Adicione uma tarefa"
 					onChange={onChangeTitle}
