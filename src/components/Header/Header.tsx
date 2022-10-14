@@ -1,15 +1,38 @@
-import { AiOutlinePlusCircle } from "react-icons/ai";
-import logo from "../../assets/logo.svg";
+import { ChangeEvent, FormEvent, useState } from "react";
 
+import { AiOutlinePlusCircle } from "react-icons/ai";
+
+import logo from "../../assets/logo.svg";
 import styles from "./Header.module.css";
 
-export function Header() {
+interface Props {
+	onAddTask: (taskTitle: string) => void;
+}
+
+export function Header({ onAddTask }: Props) {
+	const [title, setTitle] = useState("");
+
+	function handleSubmit(event: FormEvent) {
+		event.preventDefault();
+
+		onAddTask(title);
+		setTitle("");
+	}
+
+	function onChangeTitle(event: ChangeEvent<HTMLInputElement>) {
+		setTitle(event.target.value);
+	}
+
 	return (
 		<header className={styles.header}>
 			<img src={logo} alt="Logo" />
 
-			<form className={styles.newTaksForm}>
-				<input placeholder="Adicione uma tarefa" />
+			<form className={styles.newTaksForm} onSubmit={handleSubmit}>
+				<input
+					placeholder="Adicione uma tarefa"
+					onChange={onChangeTitle}
+					value={title}
+				/>
 				<button>
 					Criar
 					<AiOutlinePlusCircle size={20} />

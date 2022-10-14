@@ -5,28 +5,32 @@ import styles from "./Tasks.module.css";
 
 interface Props {
 	tasks: ITask[];
+	onDelete: (id: string) => void;
 }
 
-export function Tasks({ tasks }: Props) {
+export function Tasks({ tasks, onDelete }: Props) {
+	const tasksQuantify = tasks.length;
+	const completedTasks = tasks.filter((task) => task.isComplete).length;
+
 	return (
 		<section className={styles.task}>
 			<header className={styles.header}>
 				<div>
 					<p>Tarefas Criadas</p>
-					<span>10</span>
+					<span>{tasksQuantify}</span>
 				</div>
 
 				<div>
 					<p className={styles.textPurple}>Concluídas</p>
-					<span>2 de 10</span>
+					<span>
+						{completedTasks} de {tasksQuantify}
+					</span>
 				</div>
 			</header>
 
 			<div className={styles.list}>
 				{tasks.map((task) => (
-					<>
-						<Task task={task} />
-					</>
+					<Task key={task.id} task={task} onDelete={onDelete} />
 				))}
 			</div>
 		</section>

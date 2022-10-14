@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { v4 as uuid } from "uuid";
 
 import { Header } from "./components/Header/Header";
 import { Tasks } from "./components/Tasks/Tasks";
@@ -10,18 +11,29 @@ export interface ITask {
 }
 
 function App() {
-	const [tasks, setTasks] = useState<ITask[]>([
-		{
-			id: "1",
-			title: "Teste",
-			isComplete: true,
-		},
-	]);
+	const [tasks, setTasks] = useState<ITask[]>([]);
+
+	function addTask(taskTitle: string) {
+		setTasks([
+			...tasks,
+			{
+				id: uuid(),
+				title: taskTitle,
+				isComplete: false,
+			},
+		]);
+	}
+
+	function removeTask(id: string) {
+		const removeTask = tasks.filter((task) => task.id !== id);
+
+		setTasks(removeTask);
+	}
 
 	return (
 		<>
-			<Header />
-			<Tasks tasks={tasks} />
+			<Header onAddTask={addTask} />
+			<Tasks tasks={tasks} onDelete={removeTask} />
 		</>
 	);
 }
