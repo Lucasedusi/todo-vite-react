@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 
 import { Header } from "./components/Header/Header";
@@ -11,7 +11,19 @@ export interface ITask {
 }
 
 function App() {
-	const [tasks, setTasks] = useState<ITask[]>([]);
+	const [tasks, setTasks] = useState<ITask[]>(() => {
+		const storageTask = localStorage.getItem("@SaveTask:Tasks");
+
+		if (storageTask) {
+			return JSON.parse(storageTask);
+		}
+
+		return [];
+	});
+
+	useEffect(() => {
+		localStorage.setItem("@SaveTask:Tasks", JSON.stringify(tasks));
+	}, [tasks]);
 
 	function addTask(taskTitle: string) {
 		setTasks([
