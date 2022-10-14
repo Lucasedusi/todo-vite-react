@@ -1,4 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 import { AiOutlinePlusCircle } from "react-icons/ai";
 
@@ -15,6 +18,20 @@ export function Header({ onAddTask }: Props) {
 
 	function handleSubmit(event: FormEvent) {
 		event.preventDefault();
+
+		if (!title) {
+			toast.warn("Escreva alguma coisa", {
+				position: "bottom-center",
+				autoClose: 3000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "colored",
+			});
+			return;
+		}
 
 		onAddTask(title);
 		setTitle("");
@@ -39,6 +56,8 @@ export function Header({ onAddTask }: Props) {
 					<AiOutlinePlusCircle size={20} />
 				</button>
 			</form>
+
+			<ToastContainer />
 		</header>
 	);
 }
