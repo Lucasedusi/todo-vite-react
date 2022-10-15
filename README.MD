@@ -35,6 +35,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [ViteJs](https://vitejs.dev/guide/)
 
 
+### Instalação
 
 ```bash
 # Clone este repositório
