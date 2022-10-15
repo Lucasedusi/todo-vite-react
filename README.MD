@@ -30,9 +30,9 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-<IconifyIcon @icon="vscode-icons:file-type-reactjs" @inline={{true}} /> [React](https://pt-br.reactjs.org/)
-<IconifyIcon @icon="logos:typescript-icon" @inline={{true}} /> [TypeScript](https://www.typescriptlang.org/)
-<IconifyIcon @icon="logos:vitejs" @inline={{true}} /> [ViteJs](https://vitejs.dev/guide/)
+- [React](https://pt-br.reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [ViteJs](https://vitejs.dev/guide/)
 
 
 ### Instalação
