@@ -39,7 +39,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/Lucasedusi/todo-vite-react.git>
+$ git clone https://github.com/Lucasedusi/todo-vite-react.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd todo-vite-react
