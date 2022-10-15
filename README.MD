@@ -1,9 +1,9 @@
-# Nome do Projeto
+# ToDo List
 
-## Descrição do Projeto
+## Descrião do Projeto
 
+<p align="left">Esta aplicação tem como finalidade facilitar a organizaão do seu dia, além de listar suas atividades de maneira simples, é também possível marcá-las como comcluídas, e acompanhar quais tarefas já foram concluídas</p>
 
-<p align="center">🚀 lib para construir interfaces do usuário com componentes reutilizáveis</p>
 
 ### Pré-requisitos
 
@@ -12,12 +12,20 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 
+### Features
+
+- [x] Cadastro de atividades
+- [x] Marcar atividade como concluída
+- [ ] Exclusão de atividade
+
+
 ### 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [React](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [ViteJs](https://vitejs.dev/guide/)
 
 
 ### Autor
