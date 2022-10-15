@@ -1,6 +1,6 @@
 # ToDo List
 
-## Descrião do Projeto
+## Descrição do Projeto
 
 <p align="left">Esta aplicação tem como finalidade facilitar a organizaão do seu dia, além de listar suas atividades de maneira simples, é também possível marcá-las como comcluídas, e acompanhar quais tarefas já foram concluídas</p>
 
@@ -12,20 +12,45 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 
+### Demostração
+
+<h1 align="center">
+  <img alt="TodoLista" title="#TodoList" src="./src/assets/tasklist.png" />
+</h1>
+
+
 ### Features
 
 - [x] Cadastro de atividades
 - [x] Marcar atividade como concluída
-- [ ] Exclusão de atividade
+- [x] Exclusão de atividade
 
 
-### 🛠 Tecnologias
+### Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [React](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [ViteJs](https://vitejs.dev/guide/)
+
+
+
+```bash
+# Clone este repositório
+$ git clone <https://github.com/Lucasedusi/todo-vite-react.git>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd todo-vite-react
+
+# Instale as dependências
+$ yarn install
+
+# Execute a aplicação em modo de desenvolvimento
+$ yarn dev
+
+# O servidor inciará na porta:5173 - acesse <http://localhost:5173>
+```
 
 
 ### Autor
