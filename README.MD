@@ -57,7 +57,6 @@ $ yarn dev
 ### Autor
 ---
 
-<a href="https://blog.rocketseat.com.br/author/thiago/">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/33089713?v=4" width="100px;" alt=""/>
  <br />
  <sub><b>Lucas Eduardo</b></sub></a> <a href="https://www.linkedin.com/in/lucas-eduardo-pereira-andrade-8224751b2/" title="">🚀</a>
