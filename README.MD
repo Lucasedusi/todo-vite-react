@@ -1,8 +1,8 @@
-# ToDo List
+# Search Dev
 
 ## Descrição do Projeto
 
-<p align="left">Esta aplicação tem como finalidade facilitar a organizaão do seu dia, além de listar suas atividades de maneira simples, é também possível marcá-las como comcluídas, e acompanhar quais tarefas já foram concluídas</p>
+<p align="left">O projeto Search Dev é uma aplicação com o intuito de buscar Dev's através da API do Github, sendo assim pode-se buscar um usuário e visualizar o seu perfil com as suas principais informações, além de disso, há a possiblidade de buscar os repositórios do respectivo usuário.<br /> Lembrando que ao buscar um usuário inexistente ou deixar o campo de busca em branco será retornados os dvidos tratamentos de erros  </p>
 
 
 ### Pré-requisitos
@@ -19,11 +19,11 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 </h1>
 
 
-### Features
+### Principais Features
 
-- [x] Cadastro de atividades
-- [x] Marcar atividade como concluída
-- [x] Exclusão de atividade
+- [x] Buscar usuário
+- [x] Listar informações do Usuário
+- [x] Buscar repositorios do Usuário
 
 
 ### Tecnologias
