@@ -58,6 +58,27 @@ $ yarn dev
 # O servidor inciará na porta:5173 - acesse <http://localhost:5173>
 ```
 
+### Estrutura de Pastas
+
+Nesta seção haverão instruções caso você queira editar o template, explicando para que os diretórios são utilizados e também os arquivos de configuração.
+
+- **src** - Diretório contendo todos os arquivos da aplicação, é criado um diretório `src` para que o código da aplicação possa ser isolado em um diretório e facilmente portado para outros projetos, se necessário;
+
+  - **assets** - Diretório para armazenar imagens em geral que possam ser utilizadas na aplicação;
+
+  - **components** - Diretório onde são criados os componentes da aplicação;
+
+  - **pages** - Diretório onde ficam as páginas (telas) da aplicação, como forma de padronização e boas práticas toda página fica dentro de um diretório com seu nome;
+
+  - **services** - Diretório onde serão criados os arquivos relacionados a serviços utilizados na aplicação, por exemplo, requisições HTTP;
+
+  - **styles** - Diretório onde são criados estilos globais da aplicação;
+    
+- **app.tsx** - Arquivo onde são criados importados as rotas e os estilos globais da aplicação;
+
+- **Routes.tsx** - Arquivo onde são criados as rotas da aplicação;
+
+
 
 ### Autor
 ---
